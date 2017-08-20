@@ -1,51 +1,36 @@
 <?php
   session_start();
   include ('steamauth/userInfo.php');
-
   $servername = "...";
   $username = "...";
   $password = "...";
   $dbname = "...";
   $user = $steamprofile['personaname'];
   $steamid = $steamprofile['steamid'];
-
   $conn = new mysqli($servername, $username, $password, $dbname);
-
   if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
   } 
-
   $sqlget = "SELECT * FROM Players ORDER BY Date";
   $sqldata = mysqli_query($conn, $sqlget) or die('error getting data');
-
   $sqlget2 = "SELECT * FROM Desciption ORDER BY Date DESC LIMIT 1";
   $sqldata2 = mysqli_query($conn, $sqlget2) or die('error getting data');
-
   $sqlget3 = "SELECT * FROM Stream ORDER BY Time DESC LIMIT 3";
   $sqldata3 = mysqli_query($conn, $sqlget3) or die('error getting data');
-
   $sqlget4 = "SELECT COUNT(*) FROM Players";
   $sqldata4= mysqli_query($conn, $sqlget4) or die('error getting data');
-
   $sqlget6 = "SELECT * FROM MasterList WHERE SteamID = '$steamid' LIMIT 1";
   $sqldata6= mysqli_query($conn, $sqlget6) or die('error getting data'); 
-
   $sqlget7 = "SELECT Name FROM Players WHERE Name = '$user' LIMIT 1";
   $sqldata7= mysqli_query($conn, $sqlget7) or die('error getting data'); 
-
   $sqlget8 = "SELECT * FROM Log ORDER BY Time DESC LIMIT 10";
   $sqldata8 = mysqli_query($conn, $sqlget8) or die('error getting data');
-
   $sqlget9 = "SELECT * FROM MasterList WHERE SteamID = '$steamid' LIMIT 1";
   $sqldata9 = mysqli_query($conn, $sqlget9) or die('error getting data');
-
   $sqlget10 = "SELECT * FROM MasterList ORDER BY Coins DESC LIMIT 10";
   $sqldata10 = mysqli_query($conn, $sqlget10) or die('error getting data');
-
   $sqlget11 = "SELECT * FROM MasterList WHERE SteamID = '$steamid' LIMIT 1";
   $sqldata11 = mysqli_query($conn, $sqlget11) or die('error getting data');
-
-
   $conn->close();
 ?>
 <html lang="en">
@@ -59,7 +44,6 @@
       height: auto;
       padding: 10px;
       @include box-sizing(border-box);
-
       &:focus {
         z-index: 2;
       }
@@ -215,20 +199,7 @@
         echo "</div>";
       ?>
       <hr>
-      <br>  <p>
-               <h1> PC Specs explanation </h1>
-               I am using an iMac 21.5 inch 2013 Model Which i bootcamped to run windows
-               which is what i use to stream and play with. Its was a very expensive iMac
-               but not good for PC Gaming and keeps me from not being able to play most popular 
-               PC titles.
-               
-               Windows 8.1
-               Intel Core i5-4570S CPU@2.90GHz
-               8GB Ram
-               NVIDIA GeForce GT 750M
-      </p>
-
-              
+      <br>
       <div class="alert alert-info" role="alert">
       <p><a href="https://imgur.com/a/MNJxN" target="_blank">Tutorial on how to join the list and earn points.</a></p>
       </div>
@@ -239,7 +210,6 @@
         <?php
           echo "<table>";
                 echo "<tr><th style=\"padding: 20px\">Name</th><th style=\"padding: 20px\">Points</th></tr>";
-
                 while($row5 = mysqli_fetch_array($sqldata10, MYSQLI_ASSOC)) {
                   echo "<tr><td style=\"padding: 20px\">";
                   echo $row5['Name'];
@@ -310,9 +280,7 @@
             $row2 = mysqli_fetch_array($sqldata7, MYSQLI_ASSOC);
             $userna = $steamprofile['personaname'];
             $fee = '100';
-
             require 'steamauth/steamauth.php';
-
             if(isset($_SESSION['steamid'])) 
             {
               if($row['Ban'] == '2')
@@ -368,7 +336,6 @@
                 echo "</div>";
                 
                 } 
-
               if($row['Coins'] < 50) {
                 echo "<div class=\"alert alert-danger\" role=\"alert\">";
                 echo "<p>You need at least <i class=\"fa fa-money\" aria-hidden=\"true\"></i> 50 to sign up for the list!</p>";
