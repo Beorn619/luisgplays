@@ -308,15 +308,18 @@
               if ($row['SteamID'] == '76561198132733196' || $row['SteamID'] == '76561198408052517')
               {
                 echo "<td style=\"padding: 20px;\">";
-                echo"<p style=\"color: green; font-weight: bold; display: inline;\">[Developer] </p>";
+                echo"<p style=\"color: green; font-weight: bold;\">";
                 echo $row['Name'];
+                echo "</p>";
                 echo "</td>";
               }
               elseif ($row['SteamID'] == '76561198174980565' || $row['SteamID'] == '76561198225591476' || $row['SteamID'] == '76561198322504257')
               {
                 echo "<td style=\"padding: 20px;\">";
-                echo"<p style=\"color: cyan; font-weight: bold; display: inline;\">[Mod] </p>";
+                echo"<p 
+                style=\"color: cyan; font-weight: bold;\">";
                 echo $row['Name'];
+                echo "</p>";
                 echo "</td>";
               }
               else 
@@ -360,7 +363,7 @@
                   echo "<p><a href=\"https://steamcommunity.com/tradeoffer/new/?partner=172467468&token=3jj67qJB\" target=\"_blank\">Get more points by donating skins to luis on the official donation bot! Donate Here!</a></p>";
                   echo "</div>";
                   echo "<div class=\"alert alert-success\" role=\"alert\">";
-                  echo "<p style='display: inline'>Users who donate over $1 in skins get a special <p style='color: purple; font-weight: bold; display: inline'>[Donator]</p> Tag</p>";
+                  echo "<p style='display: inline'>Users who donate over $1 in skins get a special <p style='color: purple; font-weight: bold; display: inline'>Purple</p> Name</p>";
                   echo "</div>";
                   }
               if($row2['Name'] != $userna){
@@ -376,7 +379,7 @@
                 echo "<p><a href=\"https://steamcommunity.com/tradeoffer/new/?partner=172467468&token=3jj67qJB\" target=\"_blank\">Get more points by donating skins to luis on the official donation bot! Donate Here!</a></p>";
                 echo "</div>";
                 echo "<div class=\"alert alert-success\" role=\"alert\">";
-                echo "<p style='display: inline'>Users who donate over $1 in skins get a special <p style='color: purple; font-weight: bold; display: inline'>[Donator]</p> Tag</p>";
+                echo "<p style='display: inline'>Users who donate over $1 in skins get a special <p style='color: purple; font-weight: bold; display: inline'>Purple</p> Name</p>";
                 echo "</div>";
               }
               if($row['Coins'] > 50){
@@ -391,7 +394,7 @@
                 echo "<p><a href=\"https://steamcommunity.com/tradeoffer/new/?partner=172467468&token=3jj67qJB\" target=\"_blank\">Get more points by donating skins to luis on the official donation bot! Donate Here!</a></p>";
                 echo "</div>";
                 echo "<div class=\"alert alert-success\" role=\"alert\">";
-                echo "<p style='display: inline'>Users who donate over $1 in skins get a special <p style='color: purple; font-weight: bold; display: inline'>[Donator]</p> Tag</p>";
+                echo "<p style='display: inline'>Users who donate over $1 in skins get a special <p style='color: purple; font-weight: bold; display: inline'>Purple</p> Name</p>";
                 echo "</div>";
                 
                 } 
@@ -403,7 +406,7 @@
                 echo "<p><a href=\"https://steamcommunity.com/tradeoffer/new/?partner=172467468&token=3jj67qJB\" target=\"_blank\">Get more points by donating skins to luis on the official donation bot! Donate Here!</a></p>";
                 echo "</div>";
                 echo "<div class=\"alert alert-success\" role=\"alert\">";
-                echo "<p style='display: inline'>Users who donate over $1 in skins get a special <p style='color: purple; font-weight: bold; display: inline'>[Donator]</p> Tag</p>";
+                echo "<p style='display: inline'>Users who donate over $1 in skins get a special <p style='color: purple; font-weight: bold; display: inline'>Purple</p> Name</p>";
                 echo "</div>";
                 }
               
