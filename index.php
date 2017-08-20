@@ -151,7 +151,10 @@
           <p>
             <a class="btn btn-default btn-lg" href="//www.youtube.com/channel/UCt28ZK-ix9pKdYwpGKaFsyQ/featured" target="_blank">View Channel &raquo;</a>
           </p>
-        </div>
+        </div> <p>
+        <h1> Games I want to play! </h>
+        Players Unknown Battlegrounds
+        
       </div>
       <hr>
       <?php
