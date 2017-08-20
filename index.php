@@ -112,7 +112,14 @@
               }   
             ?>
           </ul>
-        </div>
+        </div> <p>
+                  <h1> Stream Rules! </h1>
+                   No racism, 
+                   No politics,  
+                   No spam,
+                   and No sexual talk.   
+                   Let's keep it﻿ fun and clean!
+        </p>
       </div>
     </nav>
     <header class="business-header">
