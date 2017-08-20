@@ -215,7 +215,9 @@
         echo "</div>";
       ?>
       <hr>
-      <div>
+      <div> ```hmtl
+            <img src="https://i.ytimg.com/vi/6tvTRalcx5g/hqdefault.jpg">
+            ```
         <h2>PC Specs</h2>
         <ul>
             <li>Windows 8.1</li>
