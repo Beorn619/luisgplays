@@ -2,10 +2,10 @@
   session_start();
   include ('steamauth/userInfo.php');
 
-  $servername = "localhost";
-  $username = "luisgplays3";
-  $password = "silver1";
-  $dbname = "players982";
+  $servername = "...";
+  $username = "...";
+  $password = "...";
+  $dbname = "...";
   $user = $steamprofile['personaname'];
   $steamid = $steamprofile['steamid'];
 
