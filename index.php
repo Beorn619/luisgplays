@@ -15,22 +15,31 @@
   } 
   $sqlget = "SELECT * FROM Players ORDER BY Date";
   $sqldata = mysqli_query($conn, $sqlget) or die('error getting data');
+
   $sqlget2 = "SELECT * FROM Desciption ORDER BY Date DESC LIMIT 1";
   $sqldata2 = mysqli_query($conn, $sqlget2) or die('error getting data');
+
   $sqlget3 = "SELECT * FROM Stream ORDER BY Time DESC LIMIT 3";
   $sqldata3 = mysqli_query($conn, $sqlget3) or die('error getting data');
+
   $sqlget4 = "SELECT COUNT(*) FROM Players";
   $sqldata4= mysqli_query($conn, $sqlget4) or die('error getting data');
+
   $sqlget6 = "SELECT * FROM MasterList WHERE SteamID = '$steamid' LIMIT 1";
   $sqldata6= mysqli_query($conn, $sqlget6) or die('error getting data'); 
+
   $sqlget7 = "SELECT Name FROM Players WHERE Name = '$user' LIMIT 1";
   $sqldata7= mysqli_query($conn, $sqlget7) or die('error getting data'); 
+
   $sqlget8 = "SELECT * FROM Log ORDER BY Time DESC LIMIT 10";
   $sqldata8 = mysqli_query($conn, $sqlget8) or die('error getting data');
+
   $sqlget9 = "SELECT * FROM MasterList WHERE SteamID = '$steamid' LIMIT 1";
   $sqldata9 = mysqli_query($conn, $sqlget9) or die('error getting data');
+
   $sqlget10 = "SELECT * FROM MasterList ORDER BY Coins DESC LIMIT 10";
   $sqldata10 = mysqli_query($conn, $sqlget10) or die('error getting data');
+
   $sqlget11 = "SELECT * FROM MasterList WHERE SteamID = '$steamid' LIMIT 1";
   $sqldata11 = mysqli_query($conn, $sqlget11) or die('error getting data');
   $conn->close();
@@ -221,7 +230,7 @@
           <li>No sexual talk.</li>
         </ul>
         <p>Let's keep it fun and clean!</p>
-      </div>  
+      </div>
       <hr>
       <div class="alert alert-info" role="alert">
       <p><a href="https://imgur.com/a/MNJxN" target="_blank">Tutorial on how to join the list and earn points.</a></p>
@@ -267,11 +276,10 @@
             echo "<tr><th style=\"padding: 20px\">Name</th><th style=\"padding: 20px\">Time</th></tr>";
             while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
               echo "<tr>";
-              if ($row['Name'] == 'Beorn_619')
+              if ($row['SteamID'] == '76561198408052517' || $row['SteamID'] == '76561198408052517')
               {
                 echo "<td style=\"padding: 20px;\">";
-                echo"<p style=\"color: green; font-weight: bold; display: inline;\">[Webmaster] </p>";
-                echo"<p style=\"color: cyan; font-weight: bold; display: inline;\">[Mod] </p>";
+                echo"<p style=\"color: green; font-weight: bold; display: inline;\">[Developer] </p>";
                 echo $row['Name'];
                 echo "</td>";
               }
