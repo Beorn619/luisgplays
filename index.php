@@ -212,6 +212,7 @@
       <hr>
       <div> 
         <img src="https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/3.png">
+        <hr>
         <h2>PC Specs</h2>
         <ul>
             <li>Windows 8.1</li>
