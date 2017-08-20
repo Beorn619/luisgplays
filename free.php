@@ -97,6 +97,25 @@
         echo "</h1><br><br><img src=\"";
         echo $steamprofile['avatarfull'];
         echo "\" class=\"img-circle img-responsive\" style=\"margin: 0 auto; display: block\" >";
+        while($row = mysqli_fetch_array($sqldata9, MYSQLI_ASSOC)){
+            $rank = $row['Rank'];
+         if($rank == 0){
+             echo "<p>Unranked</p>";
+             echo "<a href='#'><p>What is this?</p></a>";
+         }   
+         if($rank == 1){
+             echo "<img href='https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/1.png'>";
+             echo "<a href='#'><p>What is this?</p></a>";
+         }
+         if($rank == 2){
+             echo "<img href='https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/2.png'>";
+             echo "<a href='#'><p>What is this?</p></a>";
+         }
+         if($rank == 3){
+             echo "<img href='https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/3.png'>";
+             echo "<a href='#'><p>What is this?</p></a>";
+         }
+        }
         echo "<br>";
       ?>
       <hr>
