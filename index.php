@@ -215,9 +215,8 @@
         echo "</div>";
       ?>
       <hr>
-      <div> ```hmtl
-            <img src="https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/3.png">
-            ```
+      <div> 
+        <img src="https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/3.png">
         <h2>PC Specs</h2>
         <ul>
             <li>Windows 8.1</li>
@@ -405,4 +404,4 @@
       </footer>
     </div>
   </body>
-</html> <img src="https://i.ytimg.com/vi/fNLKXBRNTqg/maxresdefault.jpg">
+</html>
