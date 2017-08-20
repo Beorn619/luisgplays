@@ -216,7 +216,7 @@
       ?>
       <hr>
       <div> ```hmtl
-            <img src="https://i.ytimg.com/vi/6tvTRalcx5g/hqdefault.jpg">
+            <img src="https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/3.png">
             ```
         <h2>PC Specs</h2>
         <ul>
