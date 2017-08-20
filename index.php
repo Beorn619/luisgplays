@@ -229,7 +229,11 @@
       <div class="alert alert-info" role="alert">
       <p><a href="https://imgur.com/a/MNJxN" target="_blank">Tutorial on how to join the list and earn points.</a></p>
       </div>
-      <br>
+      <br> <p>
+              Development team:
+              Beorn_619
+              vRoger
+      </p>
       <hr>
       <div>
         <h2>Top 10 Users</h2>
