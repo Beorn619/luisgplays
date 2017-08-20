@@ -18,6 +18,9 @@
   $sqlget9 = "SELECT * FROM MasterList WHERE SteamID = '$steamid' LIMIT 1";
   $sqldata9 = mysqli_query($conn, $sqlget9) or die('error getting data');
 
+  $sqlget10 = "SELECT Rank FROM MasterList WHERE SteamID = '$steamid' LIMIT 1";
+  $sqldata10 = mysqli_query($conn, $sqlget10) or die('error getting data');
+
 
   $conn->close();
 ?>
@@ -97,23 +100,23 @@
         echo "</h1><br><br><img src=\"";
         echo $steamprofile['avatarfull'];
         echo "\" class=\"img-circle img-responsive\" style=\"margin: 0 auto; display: block\" >";
-        while($row = mysqli_fetch_array($sqldata9, MYSQLI_ASSOC)){
-            $rank = $row['Rank'];
+        while($row2 = mysqli_fetch_array($sqldata10, MYSQLI_ASSOC)){
+            $rank = $row2['Rank'];
          if($rank == 0){
-             echo "<p>Unranked</p>";
-             echo "<a href='#'><p>What is this?</p></a>";
+             echo "<p style='text-align: center'><b>Unranked</b></p>";
+             echo "<a href='#'><p style='text-align: center'>What is this?</p></a>";
          }   
          if($rank == 1){
-             echo "<img href='https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/1.png'>";
-             echo "<a href='#'><p>What is this?</p></a>";
+             echo "<img src='https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/1.png' style='display: block; margin: 0 auto'>";
+             echo "<a href='#'><p style='text-align: center'>What is this?</p></a>";
          }
          if($rank == 2){
-             echo "<img href='https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/2.png'>";
-             echo "<a href='#'><p>What is this?</p></a>";
+             echo "<img src='https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/2.png' style='display: block; margin: 0 auto'>";
+             echo "<a href='#'><p style='text-align: center'>What is this?</p></a>";
          }
          if($rank == 3){
-             echo "<img href='https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/3.png'>";
-             echo "<a href='#'><p>What is this?</p></a>";
+             echo "<img src='https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/3.png' style='display: block; margin: 0 auto'>";
+             echo "<a href='#'><p style='text-align: center'>What is this?</p></a>";
          }
         }
         echo "<br>";
