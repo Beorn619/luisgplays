@@ -242,9 +242,37 @@
           echo "<table>";
                 echo "<tr><th style=\"padding: 20px\">Name</th><th style=\"padding: 20px\">Points</th></tr>";
                 while($row5 = mysqli_fetch_array($sqldata10, MYSQLI_ASSOC)) {
-                  echo "<tr><td style=\"padding: 20px\">";
-                  echo $row5['Name'];
-                  echo "</td><td style=\"padding: 20px\">";
+                  echo "<tr>";
+                  
+                  if ($row5['Rank'] == 1)
+                  {
+                    echo "<td style=\"padding: 20px;\">";
+                    echo"<p style=\"color: silver; font-weight: bold; display: inline;\">[Silver 1] </p>";
+                    echo $row5['Name'];
+                    echo "</td>";
+                  }
+                  elseif ($row5['Rank'] == 2)
+                  {
+                    echo "<td style=\"padding: 20px;\">";
+                    echo"<p style=\"color: silver; font-weight: bold; display: inline;\">[Silver 2] </p>";
+                    echo $row5['Name'];
+                    echo "</td>";
+                  }
+                  elseif ($row5['Rank'] == 3)
+                  {
+                    echo "<td style=\"padding: 20px;\">";
+                    echo"<p style=\"color: silver; font-weight: bold; display: inline;\">[Silver 3] </p>";
+                    echo $row5['Name'];
+                    echo "</td>";
+                  }
+                  else 
+                  {
+                    echo "<td style=\"padding: 20px;\">";
+                    echo $row5['Name'];
+                    echo "</td>";
+                  }
+                  
+                  echo "<td style=\"padding: 20px\">";
                   echo "<i class=\"fa fa-money\" aria-hidden=\"true\"></i>&ensp;";
                   echo $row5['Coins'];       
                   echo "</td><td style=\"padding: 20px\">";
@@ -276,7 +304,7 @@
             echo "<tr><th style=\"padding: 20px\">Name</th><th style=\"padding: 20px\">Time</th></tr>";
             while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
               echo "<tr>";
-              if ($row['SteamID'] == '76561198408052517' || $row['SteamID'] == '76561198408052517')
+              if ($row['SteamID'] == '76561198132733196' || $row['SteamID'] == '76561198408052517')
               {
                 echo "<td style=\"padding: 20px;\">";
                 echo"<p style=\"color: green; font-weight: bold; display: inline;\">[Developer] </p>";
