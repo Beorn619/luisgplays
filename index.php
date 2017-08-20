@@ -2,10 +2,10 @@
   session_start();
   include ('steamauth/userInfo.php');
 
-  $servername = "...";
-  $username = "...";
-  $password = "...";
-  $dbname = "...";
+  $servername = "localhost";
+  $username = "luisgplays3";
+  $password = "silver1";
+  $dbname = "players982";
   $user = $steamprofile['personaname'];
   $steamid = $steamprofile['steamid'];
 
@@ -215,19 +215,16 @@
         echo "</div>";
       ?>
       <hr>
-      <br> <p>
-               <h1> PC Specs explanation </h1>
-               I am using an iMac 21.5 inch 2013 Model Which i bootcamped to run windows
-               which is what i use to stream and play with. Its was a very expensive iMac
-               but not good for PC Gaming and keeps me from not being able to play most popular 
-               PC titles.
-               
-               Windows 8.1
-               Intel Core i5-4570S CPU@2.90GHz
-               8GB Ram
-               NVIDIA GeForce GT 750M
-      </p>
-
+      <div>
+        <h2>PC Specs</h2>
+        <ul>
+            <li>Windows 8.1</li>
+            <li>Intel Core i5-4570S CPU@2.90GHz</li>
+            <li>8GB Ram</li>
+            <li>NVIDIA GeForce GT 750M</li>  
+        </ul>
+      </div>
+      <hr>
       <div class="alert alert-info" role="alert">
       <p><a href="https://imgur.com/a/MNJxN" target="_blank">Tutorial on how to join the list and earn points.</a></p>
       </div>
