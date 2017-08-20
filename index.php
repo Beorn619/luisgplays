@@ -222,6 +222,7 @@
         </ul>
         <p>Let's keep it fun and clean!</p>
       </div>  
+      <hr>
       <div class="alert alert-info" role="alert">
       <p><a href="https://imgur.com/a/MNJxN" target="_blank">Tutorial on how to join the list and earn points.</a></p>
       </div>
