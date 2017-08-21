@@ -10,18 +10,13 @@
   $steamid = $steamprofile['steamid'];
 
   $conn = new mysqli($servername, $username, $password, $dbname);
-
   if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
   } 
-
   $sqlget9 = "SELECT * FROM MasterList WHERE SteamID = '$steamid' LIMIT 1";
   $sqldata9 = mysqli_query($conn, $sqlget9) or die('error getting data');
-
   $sqlget10 = "SELECT Rank FROM MasterList WHERE SteamID = '$steamid' LIMIT 1";
   $sqldata10 = mysqli_query($conn, $sqlget10) or die('error getting data');
-
-
   $conn->close();
 ?>
 <html lang="en">
@@ -35,7 +30,6 @@
       height: auto;
       padding: 10px;
       @include box-sizing(border-box);
-
       &:focus {
         z-index: 2;
       }
@@ -140,22 +134,22 @@
       </div>
 -->
       <hr>
+      <div> 
+      <h2>Rank System</h2>
+      <p>The coin system is mainly used for the list, for example it is 50 coins to join the list . 
+      When your in the list you can play a game with luis live on stream! you can gain coin by:Joining
+      the steam group,Daily affiliate codes and much more. The dev team has been working on a new system 
+      for more usage of coins "The Ranks System" this will concist of csgo ranks going from silver 1 to 
+      global elite. </p>
+      <hr>
+      <h2>Why Have we made it?</h2>
+      <p>We have created this because it is more convenient and engaging for viewers to have a in stream 
+       rank. Another reason is when Luis hosts giverways in-order to join the giverway you would have to 
+       be above silver master for e.g . You get ranks by collecting coins and redeming them at 
+       https://www.luisgplays.com/index.php </p> 
+       </div> 
+       <hr>
     </div>   
-    <div> 
-    <h2>Rank System</h2>
-    <p>The coin system is mainly used for the list, for example it is 50 coins to join the list . 
-    When your in the list you can play a game with luis live on stream! you can gain coin by:Joining
-    the steam group,Daily affiliate codes and much more. The dev team has been working on a new system 
-    for more usage of coins "The Ranks System" this will concist of csgo ranks going from silver 1 to 
-    global elite. </p>
-    <hr>
-    <h2>Why Have we made it?</h2>
-    <p>We have created this because it is more convenient and engaging for viewers to have a in stream 
-     rank. Another reason is when Luis hosts giverways in-order to join the giverway you would have to 
-     be above silver master for e.g . You get ranks by collecting coins and redeming them at 
-     https://www.luisgplays.com/index.php </p> 
-     </div> 
-     <hr>
     <div class="container">
       <footer>
       <?php include ('footer.php'); ?>
