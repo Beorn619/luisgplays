@@ -40,8 +40,11 @@
   $sqlget10 = "SELECT * FROM MasterList ORDER BY Coins DESC LIMIT 10";
   $sqldata10 = mysqli_query($conn, $sqlget10) or die('error getting data');
 
-  $sqlget11 = "SELECT * FROM MasterList WHERE SteamID = '$steamid' LIMIT 1";
+  $sqlget11 = "SELECT SteamID FROM MasterList";
   $sqldata11 = mysqli_query($conn, $sqlget11) or die('error getting data');
+
+  $sqlget12 = "SELECT Rank FROM MasterList";
+  $sqldata12 = mysqli_query($conn, $sqlget12) or die('error getting data');
   $conn->close();
 ?>
 <html lang="en">
@@ -249,27 +252,87 @@
                   {
                     echo "<td style=\"padding: 20px;\">";
                     echo"<p style=\"color: silver; font-weight: bold; display: inline;\">[Silver 1] </p>";
-                    echo $row5['Name'];
+                    if ($row5['SteamID'] == '76561198132733196' || $row5['SteamID'] == '76561198408052517')
+                      {
+                        echo"<p style=\"color: green; font-weight: bold; display: inline\">";
+                        echo $row5['Name'];
+                        echo "</p>";
+                      }
+                      elseif ($row5['SteamID'] == '76561198174980565' || $row5['SteamID'] == '76561198225591476' || $row5['SteamID'] == '76561198322504257')
+                      {
+                        echo"<p style=\"color: cyan; font-weight: bold; display: inline\">";
+                        echo $row5['Name'];
+                        echo "</p>";
+                      }
+                      else 
+                      {
+                        echo $row5['Name'];
+                      }
                     echo "</td>";
                   }
                   elseif ($row5['Rank'] == 2)
                   {
                     echo "<td style=\"padding: 20px;\">";
                     echo"<p style=\"color: silver; font-weight: bold; display: inline;\">[Silver 2] </p>";
-                    echo $row5['Name'];
+                    if ($row5['SteamID'] == '76561198132733196' || $row5['SteamID'] == '76561198408052517')
+                      {
+                        echo"<p style=\"color: green; font-weight: bold; display: inline\">";
+                        echo $row5['Name'];
+                        echo "</p>";
+                      }
+                      elseif ($row5['SteamID'] == '76561198174980565' || $row5['SteamID'] == '76561198225591476' || $row5['SteamID'] == '76561198322504257')
+                      {
+                        echo"<p style=\"color: cyan; font-weight: bold; display: inline\">";
+                        echo $row5['Name'];
+                        echo "</p>";
+                      }
+                      else 
+                      {
+                        echo $row5['Name'];
+                      }
                     echo "</td>";
                   }
                   elseif ($row5['Rank'] == 3)
                   {
                     echo "<td style=\"padding: 20px;\">";
                     echo"<p style=\"color: silver; font-weight: bold; display: inline;\">[Silver 3] </p>";
-                    echo $row5['Name'];
+                    if ($row5['SteamID'] == '76561198132733196' || $row5['SteamID'] == '76561198408052517')
+                      {
+                        echo"<p style=\"color: green; font-weight: bold; display: inline\">";
+                        echo $row5['Name'];
+                        echo "</p>";
+                      }
+                      elseif ($row5['SteamID'] == '76561198174980565' || $row5['SteamID'] == '76561198225591476' || $row5['SteamID'] == '76561198322504257')
+                      {
+                        echo"<p style=\"color: cyan; font-weight: bold; display: inline\">";
+                        echo $row5['Name'];
+                        echo "</p>";
+                      }
+                      else 
+                      {
+                        echo $row5['Name'];
+                      }
                     echo "</td>";
                   }
                   else 
                   {
                     echo "<td style=\"padding: 20px;\">";
-                    echo $row5['Name'];
+                    if ($row5['SteamID'] == '76561198132733196' || $row5['SteamID'] == '76561198408052517')
+                      {
+                        echo"<p style=\"color: green; font-weight: bold;\">";
+                        echo $row5['Name'];
+                        echo "</p>";
+                      }
+                      elseif ($row5['SteamID'] == '76561198174980565' || $row5['SteamID'] == '76561198225591476' || $row5['SteamID'] == '76561198322504257')
+                      {
+                        echo"<p style=\"color: cyan; font-weight: bold;\">";
+                        echo $row5['Name'];
+                        echo "</p>";
+                      }
+                      else 
+                      {
+                        echo $row5['Name'];
+                      }
                     echo "</td>";
                   }
                   
@@ -303,34 +366,99 @@
           <?php
             echo "<table class=\".table .table-striped .table-bordered .table-responsive\" style=\"display: inline\">";
             echo "<tr><th style=\"padding: 20px\">Name</th><th style=\"padding: 20px\">Time</th></tr>";
+            $row5 = mysqli_fetch_array($sqldata12, MYSQLI_ASSOC); 
             while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
               echo "<tr>";
-              if ($row['SteamID'] == '76561198132733196' || $row['SteamID'] == '76561198408052517')
-              {
-                echo "<td style=\"padding: 20px;\">";
-                echo"<p style=\"color: green; font-weight: bold;\">";
-                echo $row['Name'];
-                echo "</p>";
-                echo "</td>";
-              }
-              elseif ($row['SteamID'] == '76561198174980565' || $row['SteamID'] == '76561198225591476' || $row['SteamID'] == '76561198322504257')
-              {
-                echo "<td style=\"padding: 20px;\">";
-                echo"<p 
-                style=\"color: cyan; font-weight: bold;\">";
-                echo $row['Name'];
-                echo "</p>";
-                echo "</td>";
-              }
-              else 
-              {
-                echo "<td style=\"padding: 20px;\">";
-                echo $row['Name'];
-                echo "</td>";
-              }
+              if ($row5['Rank'] == 1)
+                  {
+                    echo "<td style=\"padding: 20px;\">";
+                    echo"<p style=\"color: silver; font-weight: bold; display: inline;\">[Silver 1] </p>";
+                    if ($row['SteamID'] == '76561198132733196' || $row5['SteamID'] == '76561198408052517')
+                      {
+                        echo"<p style=\"color: green; font-weight: bold; display: inline\">";
+                        echo $row['Name'];
+                        echo "</p>";
+                      }
+                      elseif ($row['SteamID'] == '76561198174980565' || $row5['SteamID'] == '76561198225591476' || $row5['SteamID'] == '76561198322504257')
+                      {
+                        echo"<p style=\"color: cyan; font-weight: bold; display: inline\">";
+                        echo $row['Name'];
+                        echo "</p>";
+                      }
+                      else 
+                      {
+                        echo $row['Name'];
+                      }
+                    echo "</td>";
+                  }
+                  elseif ($row5['Rank'] == 2)
+                  {
+                    echo "<td style=\"padding: 20px;\">";
+                    echo"<p style=\"color: silver; font-weight: bold; display: inline;\">[Silver 2] </p>";
+                    if ($row['SteamID'] == '76561198132733196' || $row5['SteamID'] == '76561198408052517')
+                      {
+                        echo"<p style=\"color: green; font-weight: bold; display: inline\">";
+                        echo $row['Name'];
+                        echo "</p>";
+                      }
+                      elseif ($row['SteamID'] == '76561198174980565' || $row5['SteamID'] == '76561198225591476' || $row5['SteamID'] == '76561198322504257')
+                      {
+                        echo"<p style=\"color: cyan; font-weight: bold; display: inline\">";
+                        echo $row['Name'];
+                        echo "</p>";
+                      }
+                      else 
+                      {
+                        echo $row['Name'];
+                      }
+                    echo "</td>";
+                  }
+                  elseif ($row5['Rank'] == 3)
+                  {
+                    echo "<td style=\"padding: 20px;\">";
+                    echo"<p style=\"color: silver; font-weight: bold; display: inline;\">[Silver 3] </p>";
+                    if ($row['SteamID'] == '76561198132733196' || $row5['SteamID'] == '76561198408052517')
+                      {
+                        echo"<p style=\"color: green; font-weight: bold; display: inline\">";
+                        echo $row['Name'];
+                        echo "</p>";
+                      }
+                      elseif ($row['SteamID'] == '76561198174980565' || $row5['SteamID'] == '76561198225591476' || $row5['SteamID'] == '76561198322504257')
+                      {
+                        echo"<p style=\"color: cyan; font-weight: bold; display: inline\">";
+                        echo $row['Name'];
+                        echo "</p>";
+                      }
+                      else 
+                      {
+                        echo $row['Name'];
+                      }
+                    echo "</td>";
+                  }
+                  else 
+                  {
+                    echo "<td style=\"padding: 20px;\">";
+                    if ($row['SteamID'] == '76561198132733196' || $row5['SteamID'] == '76561198408052517')
+                      {
+                        echo"<p style=\"color: green; font-weight: bold;\">";
+                        echo $row['Name'];
+                        echo "</p>";
+                      }
+                      elseif ($row['SteamID'] == '76561198174980565' || $row5['SteamID'] == '76561198225591476' || $row5['SteamID'] == '76561198322504257')
+                      {
+                        echo"<p style=\"color: cyan; font-weight: bold;\">";
+                        echo $row['Name'];
+                        echo "</p>";
+                      }
+                      else 
+                      {
+                        echo $row['Name'];
+                      }
+                    echo "</td>";
+                  }
               echo "<td style=\"padding: 20px\">";
               echo $row['Date'];
-              echo "</td>";
+              echo "</td></tr>";
             }
             echo "</table>";
           ?>
