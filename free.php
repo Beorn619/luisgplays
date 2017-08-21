@@ -98,19 +98,19 @@
             $rank = $row2['Rank'];
          if($rank == 0){
              echo "<p style='text-align: center'><b>Unranked</b></p>";
-             echo "<a href='#'><p style='text-align: center'>What is this?</p></a>";
+             echo "<a href='#link'><p style='text-align: center'>What is this?</p></a>";
          }   
          if($rank == 1){
              echo "<img src='https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/1.png' style='display: block; margin: 0 auto'>";
-             echo "<a href='#'><p style='text-align: center'>What is this?</p></a>";
+             echo "<a href='#link'><p style='text-align: center'>What is this?</p></a>";
          }
          if($rank == 2){
              echo "<img src='https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/2.png' style='display: block; margin: 0 auto'>";
-             echo "<a href='#'><p style='text-align: center'>What is this?</p></a>";
+             echo "<a href='#link'><p style='text-align: center'>What is this?</p></a>";
          }
          if($rank == 3){
              echo "<img src='https://pro-rankedboost.netdna-ssl.com/wp-content/uploads/2016/05/3.png' style='display: block; margin: 0 auto'>";
-             echo "<a href='#'><p style='text-align: center'>What is this?</p></a>";
+             echo "<a href='#link'><p style='text-align: center'>What is this?</p></a>";
          }
         }
         echo "<br>";
@@ -123,9 +123,6 @@
           echo "</div>";
           echo "<button type=\"submit\" class=\"btn btn-default\">Submit</button>";
         echo "</form><br>";
-        echo "<div class=\"alert alert-info\" role=\"alert\">";
-        echo "<p><a href=\"https://steamcommunity.com/tradeoffer/new/?partner=172467468&token=3jj67qJB\" target=\"_blank\">Get more points by donating skins to luis on the official donation bot! Donate Here!</a></p>";
-        echo "</div>";
       ?>
 <!--
       <div class="alert alert-info" role="alert">
@@ -135,18 +132,24 @@
 -->
       <hr>
       <div> 
-      <h2>Rank System</h2>
-      <p>The coin system is mainly used for the list, for example it is 50 coins to join the list . 
-      When your in the list you can play a game with luis live on stream! you can gain coin by:Joining
-      the steam group,Daily affiliate codes and much more. The dev team has been working on a new system 
-      for more usage of coins "The Ranks System" this will concist of csgo ranks going from silver 1 to 
-      global elite. </p>
+      <h2>What is the list?</h2>
+      <p>The list is a way for Luis to be able to play with his supporters daily. It costs 50 points to join the list. If you decide that you do not want to be on the list anymore, there is a button to remove your name from the list and you will get your 50 points back. After you play with luis, he will take your name off of the list and your points will be gone forever. If, for some reason, there is an error with you joining Luis' game or for some reason you do not get to play with Luis, you will get a full refund of your points. You may have noticed that a name on the list is a different color, please see the key below for the meaning of these colors.</p>
+      <ul>
+        <li style="color: purple; font-weight: bold">Donator</li>
+        <li style="color: cyan; font-weight: bold">Moderator</li>
+        <li style="color: green; font-weight: bold">Developer</li>
+      </ul>
       <hr>
-      <h2>Why Have we made it?</h2>
-      <p>We have created this because it is more convenient and engaging for viewers to have a in stream 
-       rank. Another reason is when Luis hosts giverways in-order to join the giverway you would have to 
-       be above silver master for e.g . You get ranks by collecting coins and redeming them at 
-       https://www.luisgplays.com/index.php </p> 
+      <h2>How do I earn points?</h2>
+      <p>You can earn points in many different ways. Everyday Luis gives out 3 different promo codes during the stream. One at the beginning of the stream, on in the middle, and one at the end of the stream. You will need to enter these codes on this page for extra points. These codes are only avaliable for a limited time so you must act fast after you recieve the code. Each code is 15 points on average but their amount can fluctuate. You can also gain points by giveaways that Luis does. If you are the lucky person who wins a giveaway, coins will be automatically added to your account. You may also earn points by donating Luis your skins. You must donate to the offical donation bot listed below to recieve points. Each cent you donate is worth 1 point. All donations are final and non refundable.</p>
+      <hr>
+      <div class="alert alert-info" role="aler\">
+      <p><a href="https://steamcommunity.com/tradeoffer/new/?partner=172467468&token=3jj67qJB" target="_blank">Get more points by donating skins to luis on the official donation bot! Donate Here!</a></p>
+      </div>
+      <hr>
+      <h2 id="link">Rank System</h2>
+      <p>You may have noticed a rank by people's name. This does not represent their in-game rank, but instead their rank on this website. This feature is still in testing and will not be fully released for a while. Stay tuned!</p>
+      <hr>
        </div> 
        <hr>
     </div>   
